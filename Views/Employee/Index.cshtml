@@ -1,0 +1,26 @@
+﻿@model UserViewModal
+
+
+<form asp-controller="Employee" asp-action="Index" method="post"> 
+
+     <input type="text" asp-for="Name" />
+
+    <span asp-validation-for="Name"></span>
+
+      <input type="text" asp-for="UserName" />
+
+    <span asp-validation-for="UserName"></span>
+
+
+    <input type="text" asp-for="Email" />
+
+    <span asp-validation-for="Email"></span>
+
+       <input type="text" asp-for="Password" />
+
+    <span asp-validation-for="Password"></span>
+
+
+
+    <input type="submit" value="SaveInfo" />
+</form>
