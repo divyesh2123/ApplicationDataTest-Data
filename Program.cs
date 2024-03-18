@@ -10,6 +10,9 @@ builder.Services.AddControllersWithViews();
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("M19DBConnectionString");
 
+
+builder.Configuration.AddJsonFile("appsettings.json");
+
 builder.Services.AddDbContext<EDMSContext>(options => options.UseSqlServer(connectionString));
 
 RepositoryDepedencyContainer.Registration(builder.Services);

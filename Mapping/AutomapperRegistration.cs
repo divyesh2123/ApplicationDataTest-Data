@@ -1,5 +1,6 @@
 ﻿using ApplicatinTest.BussinessEnity;
 using ApplicatinTest.DataEntity;
+using ApplicatinTest.DataEntity.MyEntity;
 using AutoMapper;
 
 namespace ApplicationDataTest.Mapping
@@ -10,6 +11,7 @@ namespace ApplicationDataTest.Mapping
         {
             CreateMap<User, UserViewModal>().ReverseMap();
             CreateMap<CityMaster, CityViewModal>().ReverseMap();
+            //CreateMap<BatchInfoViewModal, BatchInfo>().ReverseMap();
         }
     }
 }
