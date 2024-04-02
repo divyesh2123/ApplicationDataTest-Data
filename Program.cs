@@ -1,12 +1,15 @@
 using ApplicatinTest.BussinessService;
 using ApplicatinTest.DataEntity;
 using ApplicatinTest.Repository;
+using ApplicatinTest.Repository.Concreate;
+using ApplicatinTest.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("M19DBConnectionString");
 
@@ -14,6 +17,8 @@ var connectionString = configuration.GetConnectionString("M19DBConnectionString"
 builder.Configuration.AddJsonFile("appsettings.json");
 
 builder.Services.AddDbContext<EDMSContext>(options => options.UseSqlServer(connectionString));
+
+
 
 RepositoryDepedencyContainer.Registration(builder.Services);
 ServiceDepedencyContainer.Registration(builder.Services);

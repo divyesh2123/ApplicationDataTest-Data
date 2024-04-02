@@ -205,7 +205,7 @@
                                 if (data.success) {
                                     dataTable.ajax.reload();
 
-                                    swal("Your Record has been deleted", {
+                                    swal(data.message, {
                                         icon: "success",
                                     });
                                 }

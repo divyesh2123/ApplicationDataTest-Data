@@ -30,21 +30,23 @@ namespace ApplicationDataTest.Controllers
         public async Task<IActionResult> Delete(int id)
         {
            
-                return Json(new { success = await _cityService.RemoveCity(id), message = "Deleted Successfully" });
+                return Json(new { success = await _cityService.RemoveCity(id), message = "Weltec Successfully" });
             
         }
 
         [HttpGet]
         public async Task<IActionResult> AddEditBatch(int id = 0)
         {
-            if (id == 0)
-                return View(new CityViewModal());
-            else
-            {
-                
-                    return View(await _cityService.GetCity(id));
-                
-            }
+            //if (id == 0)
+            //    return View(new CityViewModal());
+            //else
+            //{
+
+            //        return View(await _cityService.GetCity(id));
+
+            //}
+
+            return View();
 
         }
 
