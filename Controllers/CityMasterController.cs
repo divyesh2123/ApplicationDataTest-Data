@@ -37,16 +37,16 @@ namespace ApplicationDataTest.Controllers
         [HttpGet]
         public async Task<IActionResult> AddEditBatch(int id = 0)
         {
-            //if (id == 0)
-            //    return View(new CityViewModal());
-            //else
-            //{
+            if (id == 0)
+                return View();
+            else
+            {
 
-            //        return View(await _cityService.GetCity(id));
+                return View(await _cityService.GetCity(id));
 
-            //}
+                //}
 
-            return View();
+                return View();
 
         }
 
