@@ -50,17 +50,7 @@ namespace ApplicationDataTest.Controllers
 
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddEditBatch(CityViewModal batchViewModal)
-        {
-            
-
-           
-                    return Json(new { success = await _cityService.AddUpdateCity(batchViewModal), message = "Saved Successfully" });
-               
-            
-
-
+        
         }
     }
 }

@@ -10,6 +10,8 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+
 var configuration = builder.Configuration;
 var connectionString = configuration.GetConnectionString("M19DBConnectionString");
 
